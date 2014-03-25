@@ -1,8 +1,6 @@
-
   <!-- Nested PolyElt -->
 <polymer-element name="nest-a" >
   <template><h3>Nested A</h3></template>
-  
 </polymer-element>
 
 <!-- Nested PolyElt -->
@@ -12,12 +10,13 @@
 
 <!-- Containing PolyElt -->
 <polymer-element name="nest-container" >
-  <template><h1>Container</h1>
-  <template if={{false}}>
+  <template>
+    <h1>Container</h1>
+    <template if={{false}}>
+      <nest-b></nest-b>
+    </template>
+    <nest-a></nest-a>
     <nest-b></nest-b>
-  </template>
-  <nest-a></nest-a>
-  <nest-b></nest-b>
   </template>
   <script type="application/dart" src="nest.dart"></script>
 </polymer-element>
